@@ -1,0 +1,20 @@
+<template name="main">
+    <div class="container">
+        <div class="grid">
+            <table class="grid-table">
+                {{#each row in gridRows}}
+                    <tr>
+                        {{#each col in gridCols}}
+                            <td>
+                                <span class="tile {{thisTile row col}}" data-xy="{{row}},{{col}}"></span>
+                            </td>
+                        {{/each}}
+                    </tr>
+                {{/each}}
+            </table>
+            <div id="character" class="character">
+                <span class="character-sprite"></span>
+            </div>
+        </div>
+    </div>
+</template>
